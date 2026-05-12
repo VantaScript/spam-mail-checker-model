@@ -68,7 +68,7 @@ def remove_stopwords(text):
     output = " ".join(imp_words)
 
     return output
-
+  
 
 balanced_data['text'] = balanced_data['text'].apply(lambda text: remove_stopwords(text))
 balanced_data.head()
