@@ -68,13 +68,13 @@ def remove_stopwords(text):
     output = " ".join(imp_words)
 
     return output
-
+  
 
 balanced_data['text'] = balanced_data['text'].apply(lambda text: remove_stopwords(text))
 balanced_data.head()
 
 train_X, test_X, train_Y, test_Y = train_test_split(
-    balanced_data['text'], balanced_data['label'], test_size=0.2, random_state=42
+    balanced_data['text'], balanced_data['label'], test_size=0.2, random_state=48
 )
 
 tokenizer = Tokenizer()
